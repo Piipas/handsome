@@ -1,0 +1,22 @@
+{% extends "layout.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <p class="sentence">
+            <span>Hello</span>
+            <input class="name-input" value="{{ name }}" />
+            <span class="name-value">
+                <span class="value">{{ name }}</span>
+                <span class="click-here">
+                    <span>
+                        <img src="img/arrow.png" />
+                        <span>Set your name here.</span>
+                    </span>
+                </span>
+            </span>
+            <span>you are handsome 😎.</span>
+        </p>
+    </div>
+{% endblock %}
