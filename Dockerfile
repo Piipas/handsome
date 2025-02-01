@@ -1,5 +1,5 @@
 # Stage 1: Build
-FROM node:18 AS build
+FROM node:18-alpine AS build
 
 # Set the working directory
 WORKDIR /app
@@ -7,8 +7,11 @@ WORKDIR /app
 # Copy package.json and lock file
 COPY package.json pnpm-lock.yaml ./
 
+# Install pnpm globally
+RUN npm install -g pnpm 
+
 # Install dependencies
-RUN npm install -g pnpm && pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile
 
 # Copy the rest of the application
 COPY . .
@@ -17,7 +20,7 @@ COPY . .
 RUN pnpm run build
 
 # Stage 2: Run
-FROM node:18 AS runtime
+FROM node:18-alpine AS runtime
 
 # Set the working directory
 WORKDIR /app

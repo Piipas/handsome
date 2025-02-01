@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
-    "@types/twig": "^1.12.16"
+    "@types/twig": "^1.12.16",
+    "typescript": "^5.7.3"
   }
 }
