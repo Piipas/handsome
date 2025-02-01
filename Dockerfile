@@ -31,5 +31,8 @@ COPY --from=build /app ./
 # Expose the port the app runs on
 EXPOSE 3000
 
+# Install pnpm globally
+RUN npm install -g pnpm 
+
 # Start the application
 CMD ["pnpm", "start"]
