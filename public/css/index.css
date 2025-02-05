@@ -17,6 +17,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .share {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border: 0;
+    outline: none;
+    aspect-ratio: 1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: .2s;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+      background-color: #ffffff1a;
+    }
+  }
 }
 
 .sentence {
@@ -66,7 +89,7 @@ body {
 
         img {
           width: 70px;
-          transform: rotateY(180deg) rotate(90deg);
+          transform: rotateY(180deg) rotate(57deg) rotateX(180deg);
           filter: contrast(0%) brightness(2);
         }
 
@@ -81,6 +104,12 @@ body {
     & > span {
       padding-right: 5px;
     }
+  }
+
+  .compliment {
+    text-decoration: underline;
+    cursor: pointer;
+    text-transform: capitalize
   }
 }
 
